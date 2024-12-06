@@ -55,7 +55,7 @@ const Register: React.FC = () => {
         >
           Register
         </button>
-        <p className="text-sm mt-4 text-center">
+        <p className="text-sm mt-4 text-center font-semibold ">
           Already have an account?{' '}
           <Link to="/login" className="text-blue-500 hover:underline">
             Login here
