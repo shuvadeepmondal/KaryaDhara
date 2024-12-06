@@ -1,4 +1,4 @@
-# React + Vite + TypeScript Template (react-vite-ui)
+# KaryaDhara
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
 
@@ -30,13 +30,13 @@ Follow these steps to get started with the react-vite-ui template:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dan5py/react-vite-ui.git
+   git clone https://github.com/shuvadeepmondal/KaryaDhara.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd react-vite-ui
+   cd KaryaDhara
    ```
 
 3. Install the dependencies:
