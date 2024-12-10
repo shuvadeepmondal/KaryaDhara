@@ -30,12 +30,12 @@ const Login: React.FC = () => {
     <div className="h-screen w-screen flex items-center justify-center bg-cover bg-center relative">
       <div className="absolute inset-5 bg-black bg-opacity-20"></div>
       <div className="relative bg-white bg-opacity-5 backdrop-blur-md p-5 rounded-3xl shadow-lg max-w-md w-full">
-        <h2 className="text-3xl font-bold mb-6 text-center ">Welcome Back</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center ">Welcome <span className='text-purple-500'>Back</span> !</h2>
         <div className="mb-4">
           <label className="block mb-2 text-sm font-medium">Enter Your Email</label>
           <input
             type="email"
-            className="w-full px-3 py-1 border text-black rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full px-3 py-1 border text-black rounded-xl focus:outline-none focus:ring focus:ring-purple-500"
             placeholder='example@gmail.com'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -46,7 +46,7 @@ const Login: React.FC = () => {
           <label className="block mb-2 text-sm font-medium">Enter Your Password</label>
           <input
             type="password"
-            className="w-full px-3 py-1 text-black border rounded-xl focus:outline-none focus:ring focus:ring-blue-300"
+            className="w-full px-3 py-1 text-black border rounded-xl focus:outline-none focus:ring focus:ring-purple-500"
             placeholder='XXXXXXXXXX'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -61,7 +61,7 @@ const Login: React.FC = () => {
         </button>
         <p className="text-sm font-semibold mt-3 text-center justify-between">
           Don't have an account?{' '}
-          <Link to="/register" className="text-blue-500 hover:underline">
+          <Link to="/register" className="text-purple-500 hover:underline">
             Register here
           </Link>
         </p>
