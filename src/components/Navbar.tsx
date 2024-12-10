@@ -1,7 +1,14 @@
-import React from "react";
+
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/todologo.png";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login"); // Change "/login" to your desired route
+  
+  };
   return (
     <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-opacity-70 text-white shadow-xl z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +20,8 @@ const Navbar: React.FC = () => {
 
           <div>
             <button
-              className="bg-purple-500 text-white  px-4 py-1 font-2xl rounded-2xl hover:bg-purple-600 transition duration-200"
+              className="bg-purple-500 text-white  px-4 py-1.5 font-2xl font-semibold rounded-3xl hover:bg-purple-600 transition duration-200"
+              onClick={handleLoginClick}
             >
               Login
             </button>
