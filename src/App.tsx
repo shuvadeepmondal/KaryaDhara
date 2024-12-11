@@ -5,6 +5,7 @@ import Particle from './components/Particle';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import { Toaster } from 'sonner';
+import Dashboard from './components/dashboard/Dashboard';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Particle />
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Navigate to="/" />} />
