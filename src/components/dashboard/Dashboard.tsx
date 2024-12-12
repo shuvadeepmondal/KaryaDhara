@@ -11,6 +11,7 @@ export interface Task {
   priority: 'low' | 'medium' | 'high';
   dueDate: Date | null;
   completed: boolean;
+  incompleted:boolean;
 }
 
 const Dashboard = () => {

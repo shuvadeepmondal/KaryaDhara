@@ -16,7 +16,7 @@ const Login: React.FC = () => {
       //   password : password
       // });
       toast.success("Login Successful!",{position: "top-center"});
-      router('/register')
+      router('/dashboard')
 
     } catch (error) {
       toast.error("Login Failed!",{position: "top-center"});
