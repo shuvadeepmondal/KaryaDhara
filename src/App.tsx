@@ -6,6 +6,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import { Toaster } from 'sonner';
 import Dashboard from './components/dashboard/Dashboard';
+import AddTaskForm from './components/form/AddTaskForm';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/add_task" element={<AddTaskForm />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

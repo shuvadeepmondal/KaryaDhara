@@ -14,7 +14,10 @@ export const NewTaskForm: React.FC<NewTaskFormProps> = ({ onAddTask }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (title.trim()) {
-      onAddTask({ title: title.trim(), description, priority, dueDate });
+      onAddTask({
+        title: title.trim(), description, priority, dueDate,
+        incompleted: false
+      });
       setTitle('');
       setDescription('');
       setPriority('medium');

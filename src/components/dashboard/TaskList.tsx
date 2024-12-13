@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import { useState } from 'react';
 import { Task } from './Dashboard';
 
 interface TaskListProps {
@@ -8,21 +8,21 @@ interface TaskListProps {
 }
 
 export const TaskList: React.FC<TaskListProps> = ({ tasks, onUpdateTask, onDeleteTask }) => {
-  const [editingTask, setEditingTask] = useState<Task | null>(null);
+  // const [editingTask, setEditingTask] = useState<Task | null>(null);
 
-  const handleEditTask = (task: Task) => {
-    setEditingTask(task);
-  };
+  // const handleEditTask = (task: Task) => {
+  //   setEditingTask(task);
+  // };
 
-  const handleUpdateTask = (updatedTask: Omit<Task, 'id' | 'completed'>) => {
-    if (editingTask) {
-      onUpdateTask({
-        ...editingTask,
-        ...updatedTask,
-      });
-      setEditingTask(null);
-    }
-  };
+  // const handleUpdateTask = (updatedTask: Omit<Task, 'id' | 'completed'>) => {
+  //   if (editingTask) {
+  //     onUpdateTask({
+  //       ...editingTask,
+  //       ...updatedTask,
+  //     });
+  //     setEditingTask(null);
+  //   }
+  // };
 
   if (tasks.length === 0) {
     return <p className="text-center text-gray-500">No tasks yet. Add a task to get started!</p>;
@@ -69,7 +69,7 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks, onUpdateTask, onDelet
             </td>
             <td className="px-4 py-2 text-right space-x-2">
               <button
-                onClick={() => handleEditTask(task)}
+                // onClick={() => handleEditTask(task)}
                 className="px-2 py-1 text-blue-600 hover:text-blue-800"
               >
                 Edit
