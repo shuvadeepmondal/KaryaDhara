@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Task } from './Dashboard';
 
 interface TaskStatsProps {
@@ -8,7 +8,7 @@ interface TaskStatsProps {
 export const TaskStats: React.FC<TaskStatsProps> = ({ tasks }) => {
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter(task => task.completed).length;
-  const pendingTasks = tasks.filter(task => task.incompleted).length;
+  const pendingTasks = totalTasks - completedTasks;
   const highPriorityTasks = tasks.filter(task => task.priority === 'high').length;
 
   return (
@@ -34,10 +34,15 @@ export const TaskStats: React.FC<TaskStatsProps> = ({ tasks }) => {
 
       <div className="bg-white border border-gray-300 p-4 rounded shadow">
         <div className="flex justify-between items-center pb-2">
-          <h3 className="text-lg font-medium text-black">Total Tasks</h3>
+          <h3 className="text-lg font-medium text-black">Pending Tasks</h3>
           <span className="text-gray-300">&#9675;</span>
         </div>
-        <div className="text-3xl text-black font-bold">{pendingTasks}</div>
+        <div className="text-3xl text-black font-bold">
+          {pendingTasks > 0 ? pendingTasks : '0'}
+        </div>
+        <p className="text-xs text-gray-500">
+          {totalTasks > 0 ? `${Math.round((pendingTasks / totalTasks) * 100)}%` : '0%'} of total tasks
+        </p>
       </div>
 
       <div className="bg-white border border-gray-300 p-4 rounded shadow">

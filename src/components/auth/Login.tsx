@@ -28,7 +28,6 @@ const Login: React.FC = () => {
 
   return (
     <div className="h-screen w-screen flex items-center justify-center bg-cover bg-center relative">
-      <div className="absolute inset-5 bg-black bg-opacity-20"></div>
       <div className="relative bg-white bg-opacity-5 backdrop-blur-md p-5 rounded-3xl shadow-lg max-w-md w-full">
         <h2 className="text-3xl font-bold mb-6 text-center ">Welcome <span className='text-purple-500'>Back</span> !</h2>
         <div className="mb-4">
